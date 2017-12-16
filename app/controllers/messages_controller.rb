@@ -8,8 +8,7 @@ class MessagesController < ApplicationController
   end
 
   # GET /messages/1
-  def show
-  end
+  def show; end
 
   # GET /messages/new
   def new
@@ -17,8 +16,7 @@ class MessagesController < ApplicationController
   end
 
   # GET /messages/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /messages
   def create
@@ -47,17 +45,18 @@ class MessagesController < ApplicationController
   end
 
   private
-    def current_user
-      User.find_by(id: 1)
-    end
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_message
-      @message = Message.find(params[:id])
-    end
+  def current_user
+    User.find_by(id: 1)
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def message_params
-      params.require(:message).permit(:sender_id, :recipient_id, :body)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_message
+    @message = Message.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def message_params
+    params.require(:message).permit(:sender_id, :recipient_id, :body)
+  end
 end
