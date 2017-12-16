@@ -5,6 +5,8 @@ gem 'rails', '~> 5.1.4'
 
 gem 'rails-erd'
 
+gem 'active_model_serializers'
+
 gem 'listen', group: :development
 gem 'spring', group: :development
 
