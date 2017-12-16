@@ -3,9 +3,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 5.1.4'
 
-gem 'rails-api'
+gem 'rails-erd'
 
-gem 'spring', :group => :development
+gem 'listen', group: :development
+gem 'spring', group: :development
 
 
 gem 'pg'
