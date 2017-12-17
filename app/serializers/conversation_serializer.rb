@@ -1,3 +1,3 @@
 class ConversationSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :participant, :messages
 end

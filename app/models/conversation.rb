@@ -1,4 +1,5 @@
 class Conversation
+  include ActiveModel::Serialization
   attr_reader :participant, :messages
 
   def initialize(attributes)
