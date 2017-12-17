@@ -1,5 +1,13 @@
 class MessageSerializer < ActiveModel::Serializer
-  attributes :body
-  belongs_to :sender
-  belongs_to :recipient
+  attributes :body,
+             :sender,
+             :recipient
+
+  def sender
+    UserSerializer.new(object.sender).attributes
+  end
+
+  def recipient
+    UserSerializer.new(object.recipient).attributes
+  end
 end
